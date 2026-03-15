@@ -222,6 +222,12 @@ p {
 
 a {
     color: black;
+    text-decoration: underline;
+    transition: color 0.1s linear;
+}
+
+a:hover {
+    color: #282828;
     text-decoration: underline dotted;
 }
 
