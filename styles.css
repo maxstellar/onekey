@@ -273,8 +273,18 @@ header button:last-child {
     padding-right: 1.5rem;
 }
 
+/* the following is supposed to kick in for mobile */
 @media only screen and (max-width: 767px) {
     header {
         display: none !important;
     }
+
+    .youmortalscantcontainme {
+        display: block;
+    }
+}
+
+/* kicks in for desktop */
+@media screen and (min-width: 768px) {
+    
 }
