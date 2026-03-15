@@ -216,6 +216,10 @@ p {
     width: 10vw;
 }
 
+.cheesecenter {
+    text-align: center;
+}
+
 a {
     color: black;
 }
