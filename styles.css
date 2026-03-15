@@ -95,3 +95,21 @@ button:hover {
 .filled:hover {
     background-color: #282828;
 }
+
+.input {
+    border-radius: 3.40282e38px;
+    padding: 1.25rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Phantom Sans', sans-serif;
+}
+
+.dashed {
+    border: dashed;
+    border-color: black;
+}
+
+.dashed:focus {
+    outline: none;
+    border: solid;
+}
