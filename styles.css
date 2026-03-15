@@ -166,11 +166,22 @@ p {
     letter-spacing: 0.7px;
 }
 
+.smallheadnm {
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
 #about {
     color: #282828;
 }
 
-.famous-examples {
+.faq {
+    color: #282828;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes {
     display: flex;
 }
 
@@ -182,7 +193,39 @@ p {
     margin-right: 1rem;
 }
 
+.faqbox {
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1rem;
+    width: 43%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faqwidebox {
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1rem;
+    width: 93%;
+    margin-right: 1rem;
+}
+
 .eximg {
     height: auto;
     width: 10vw;
+}
+
+a {
+    color: black;
+}
+
+footer {
+    margin-top: 3rem;
+    background-color: whitesmoke;
+    width: 100vw;
+    padding: 0.5rem;
+}
+
+header {
+    position: static;
 }
