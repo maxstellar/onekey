@@ -222,6 +222,7 @@ p {
 
 a {
     color: black;
+    text-decoration: underline dotted;
 }
 
 footer {
