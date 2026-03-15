@@ -178,9 +178,6 @@ p {
 
 .faq {
     color: #282828;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .boxes {
