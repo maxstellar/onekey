@@ -181,6 +181,6 @@ p {
 }
 
 .eximg {
-    height: 10rem;
-    width: auto;
+    height: auto;
+    width: 10vw;
 }
