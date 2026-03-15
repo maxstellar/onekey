@@ -140,7 +140,8 @@ input.dashed:focus {
 }
 
 .centertext {
-    width: 37vw;
+    width: 40vw;
+    min-width: 45rem;
     text-align: left;
     padding: 2rem;
     display: block;
