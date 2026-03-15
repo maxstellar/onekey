@@ -10,12 +10,23 @@
         <title>onekey</title>
         <link type="image/x-icon" rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function scrollToAnchor(id) {
+                const targetElement = document.getElementById(id);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        </script>
     </head>
     <body>
         <header>
-            
+            <button class="bdashed nav" onclick="scrollToAnchor('home')">home</button>
+            <button class="bdashed nav" onclick="scrollToAnchor('about')">about</button>
+            <button class="bdashed nav" onclick="scrollToAnchor('faq')">faq</button>
         </header>
-        <div id="home" class="youmortalscantcontainme">
+        <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 2vw; height: 7vw;" ></a>
+        <div class="youmortalscantcontainme">
             <div class="display">
                 <img class="dimg" src="img/macropad_drawing.png">
             </div>
