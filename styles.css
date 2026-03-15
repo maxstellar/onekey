@@ -42,17 +42,24 @@ body {
 
 .youmortalscantcontainme {
     display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 
 .panel {
-    margin-left: auto;
-    margin-right: 20rem;
-    margin-top: 25vh;
+    margin-top: 30vh;
+    margin-left: 7rem;
 }
 
 .logo {
     height: auto;
     width: 37rem;
+}
+
+.dimg {
+    margin-top: 25vh;
+    height: 30rem;
+    width: 30rem;
 }
 
 .tagline {
@@ -105,11 +112,75 @@ button:hover {
 }
 
 .dashed {
-    border: dashed;
+    border: dashed 0.25rem;
     border-color: black;
 }
 
-.dashed:focus {
+input.dashed:focus {
     outline: none;
-    border: solid;
+    border: solid 0.25rem;
+}
+
+.bdashed {
+    outline: none;
+    border: solid 0.25rem;
+}
+
+div.bdashed:hover {
+    border: dashed 0.25rem;
+    border-color: black;
+}
+
+.sectionhead {
+    color: black;
+    font-size: 4rem;
+}
+
+.centertext {
+    width: 37vw;
+    text-align: left;
+    padding: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt {
+    margin-top: 15rem;
+}
+
+.ysws {
+    font-size: 1.13rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.77778;
+}
+
+.smallhead {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+#about {
+    color: #282828;
+}
+
+.famous-examples {
+    display: flex;
+}
+
+.famex {
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1rem;
+    width: 30%;
+    margin-right: 1rem;
+}
+
+.eximg {
+    height: 10rem;
+    width: auto;
 }
