@@ -32,13 +32,17 @@
   font-display: swap;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Phantom Sans', sans-serif;
     font-size: 16px;
-    overflow-x: hidden;
+    width: 100%;
 }
 
 .youmortalscantcontainme {
@@ -142,7 +146,6 @@ input.dotted:focus {
 
 .centertext {
     width: 40vw;
-    min-width: 45rem;
     text-align: left;
     padding: 2rem;
     display: block;
@@ -236,8 +239,8 @@ a:hover {
 footer {
     margin-top: 3rem;
     background-color: whitesmoke;
-    width: 100vw;
     padding: 0.5rem;
+    text-align: center;
 }
 
 header {
@@ -282,9 +285,75 @@ header button:last-child {
     .youmortalscantcontainme {
         display: block;
     }
+
+    .logo {
+        width: auto;
+        height: 10vh;
+    }
+
+    .display {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dimg {
+        height: 40vh;
+        width: 45vh;
+        margin-top: 15vh;
+    }
+
+    .panel {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10vh;
+    }
+
+    .tagline {
+        font-size: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #landing {
+        height: 75vh;
+    }
+
+    .centertext {
+        width: 87vw;
+        text-align: left;
+        padding: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .faqbox p {
+        font-size: 2vh;
+    }
+
+    .famex p {
+        font-size: 1.75vh;
+    }
+
+    form {
+        margin-top: 3vh;
+    }
+
+    .famex, .faqbox, .faqwidebox {
+        margin-right: 0;
+    }
+
+    .boxes {
+        gap: 1vw;
+    }
 }
 
 /* kicks in for desktop */
 @media screen and (min-width: 768px) {
-    
+    .centertext, footer {
+        min-width: 45rem;
+    }
 }
