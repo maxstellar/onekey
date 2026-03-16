@@ -19,11 +19,7 @@
                 }
             }
 
-
-            function playKeySound() {
-                const sound = new Audio('audio/key.wav');
-                sound.play();
-            }
+            const sound = new Audio('audio/key.wav');
         </script>
     </head>
     <body>
@@ -50,7 +46,7 @@
                     const img = document.getElementById("dimg");
 
                     img.addEventListener("click", () => {
-
+                    sound.play();
                     let i = 0;
                     const interval = setInterval(() => {
                         img.src = frames[i];
