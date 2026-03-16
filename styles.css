@@ -352,6 +352,10 @@ header button:last-child {
     .boxes {
         gap: 1vw;
     }
+
+    .duo {
+        display: contents;
+    }
 }
 
 /* kicks in for desktop */
