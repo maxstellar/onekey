@@ -18,8 +18,11 @@
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-
-            const sound = new Audio('audio/key.wav');
+            
+            function playKeySound() {
+                const sound = new Audio('audio/key.wav');
+                sound.play()
+            }
         </script>
     </head>
     <body>
@@ -31,7 +34,7 @@
         <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 2vw; height: 7vw; min-height: 7rem;" ></a>
         <div id="landing" class="youmortalscantcontainme">
             <div class="display">
-                <img onclick="sound.play()" id="dimg" class="dimg" src="img/frame1.png">
+                <img onclick="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
                 <script>
                     const frames = [
                     "img/frame1.png",
