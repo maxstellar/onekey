@@ -356,6 +356,10 @@ header button:last-child {
     .duo {
         display: contents;
     }
+
+    .duo div {
+        width: 95%
+    }
 }
 
 /* kicks in for desktop */
