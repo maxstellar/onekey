@@ -301,6 +301,7 @@ header button:last-child {
         height: 40vh;
         width: 45vh;
         margin-top: 15vh;
+        margin-left: 0;
     }
 
     .panel {
@@ -321,7 +322,7 @@ header button:last-child {
     }
 
     .centertext {
-        width: 87vw;
+        width: 100%;
         text-align: left;
         padding: 2rem;
         display: block;
@@ -330,12 +331,12 @@ header button:last-child {
         box-sizing: border-box;
     }
 
-    .faqbox p {
+    .faqbox p, .faqwidebox p {
         font-size: 2vh;
     }
 
     .famex p {
-        font-size: 1.75vh;
+        font-size: 1.6vh;
     }
 
     form {
