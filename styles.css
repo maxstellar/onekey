@@ -187,7 +187,6 @@ p {
 
 .boxes {
     display: flex;
-    gap: 1rem;
 }
 
 .famex {
@@ -195,6 +194,7 @@ p {
     background-color: white;
     padding: 1rem;
     width: 30%;
+    margin-right: 1rem;
 }
 
 .faqbox {
@@ -202,6 +202,7 @@ p {
     background-color: white;
     padding: 1rem;
     width: 43.305%;
+    margin-right: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -209,13 +210,13 @@ p {
     border-radius: 1rem;
     background-color: white;
     padding: 1rem;
-    --percent: 86.61%;
-    width: calc(var(--percent) + 3.5rem);
+    width: 95%;
+    margin-right: 1rem;
 }
 
 .eximg {
     height: auto;
-    width: 10rem;
+    width: 10vw;
 }
 
 .cheesecenter {
@@ -347,11 +348,6 @@ header button:last-child {
 
     .boxes {
         gap: 1vw;
-    }
-
-    .eximg {
-        height: auto;
-        width: 10vw;
     }
 }
 
