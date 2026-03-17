@@ -18,24 +18,23 @@
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-
-
+            
             function playKeySound() {
                 const sound = new Audio('audio/key.wav');
-                sound.play();
+                sound.play()
             }
         </script>
     </head>
     <body>
         <header>
-            <button class="bdotted nav" onclick="scrollToAnchor('home')">home</button>
-            <button class="bdotted nav" onclick="scrollToAnchor('about')">about</button>
-            <button class="bdotted nav" onclick="scrollToAnchor('faq')">faq</button>
+            <button style="vertical-align: middle;" class="bdotted nav" onclick="scrollToAnchor('home')"><img style="vertical-align: middle; margin-right: 7px;" src="https://icons.hackclub.com/api/icons/black/home.svg" width="30"><span>home</span></button>
+            <button class="bdotted nav" onclick="scrollToAnchor('about')"><img style="vertical-align: middle; margin-right: 8px;" src="https://icons.hackclub.com/api/icons/black/info.svg" width="30"><span>about</span></button>
+            <button class="bdotted nav" onclick="scrollToAnchor('faq')"><img style="vertical-align: middle; margin-right: 8px;" src="https://icons.hackclub.com/api/icons/black/support.svg" width="32"><span>faq</span></button>
         </header>
         <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 2vw; height: 7vw; min-height: 7rem;" ></a>
         <div id="landing" class="youmortalscantcontainme">
             <div class="display">
-                <img id="dimg" class="dimg" onclick="playKeySound()" src="img/frame1.png">
+                <img onclick="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
                 <script>
                     const frames = [
                     "img/frame1.png",
@@ -50,7 +49,6 @@
                     const img = document.getElementById("dimg");
 
                     img.addEventListener("click", () => {
-
                     let i = 0;
                     const interval = setInterval(() => {
                         img.src = frames[i];
@@ -67,7 +65,7 @@
                 <img class="logo" src="img/onekey.png">
                 <p class="tagline">make a program that only uses one key, get a one key macropad!</p>
                 <form method="GET" action="https://onekey.fillout.com/rsvp">
-                    <input style="margin-right: 1rem;" class="input dotted" type="email" name="email" placeholder="email" required>
+                    <input style="margin-right: 0.5rem;" class="input dotted" type="email" name="email" placeholder="email" required>
                     <button type="submit" class="filled">RSVP!</button>
                 </form>
             </div>
@@ -103,7 +101,7 @@
             <div class="centertext">
                 <h1 class="sectionhead">faq</h1>
                 <div class="faq">
-                    <div class="boxes">
+                    <div class="boxes duo">
                         <div class="faqbox bdotted">
                             <p class="smallheadnm"><strong>who is eligible?</strong></p>
                             <p>to be eligible for onekey, you need to be between the ages for 13 and 18.</p>
@@ -113,7 +111,7 @@
                             <p>it's 100% free! if you qualify, we'll pay for all your prizes + shipping (except customs fees)!</p>
                         </div>
                     </div>
-                    <div class="boxes">
+                    <div class="boxes duo">
                         <div class="faqbox bdotted">
                             <p class="smallheadnm"><strong>what counts as "one key?"</strong></p>
                             <p>your app should be controllable with only one key! anything else where you're pressing a button or clicking something for input is not allowed! mouse movement, mic, camera are acceptable.</p>
@@ -123,7 +121,7 @@
                             <p>yes, sort of... when claiming your prize, you can choose between a variety of different options, like case color, keycap design, and key switch. you'll be able to unlock more options by completing sidequests!</p>
                         </div>
                     </div>
-                    <div class="boxes">
+                    <div class="boxes duo">
                         <div class="faqbox bdotted">
                             <p class="smallheadnm"><strong>what can i make?</strong></p>
                             <p>all types of projects are allowed! whether it's a game, an app, or a website, as long as it only uses one key, it qualifies!</p>
@@ -133,7 +131,7 @@
                             <p>as many as you'd like! there's no limit, but once you finish all side quests and meet all milestones, you'll have already unlocked all unique prizes.</p>
                         </div>
                     </div>
-                    <div class="boxes">
+                    <div class="boxes duo">
                         <div class="faqwidebox bdotted">
                             <p class="smallheadnm"><strong>is this legit? what's hack club?</strong></p>
                             <p>we're legit! hack club is the world's largest community of teenage makers, and a 501(c)(3) nonprofit. we've hosted programs like <a href="https://highseas.hackclub.com/">high seas</a> and <a href="https://summer.hackclub.com/">summer of making</a> which gave out prizes for building other sorts of projects. we're supported by donations from companies like GitHub or individual generous donations!</p>
