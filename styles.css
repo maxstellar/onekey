@@ -339,6 +339,11 @@ header button:last-child {
         font-size: 1.6vh;
     }
 
+    .eximg {
+        height: auto;
+        width: 20vw;
+    }
+
     form {
         margin-top: 3vh;
     }
