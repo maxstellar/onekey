@@ -26,11 +26,6 @@
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-            
-            function playKeySound() {
-                const sound = new Audio('audio/key.wav');
-                sound.play()
-            }
         </script>
     </head>
     <body>
@@ -42,30 +37,56 @@
         <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 2vw; height: 7vw; min-height: 7rem;" ></a>
         <div id="landing" class="youmortalscantcontainme">
             <div class="display">
-                <img onclick="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
+                <img selectable="false" draggable="false" onmousedown="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
                 <script>
-                    const frames = [
+                    const framesmd = [
                     "img/frame1.png",
                     "img/frame2.png",
                     "img/frame3.png",
-                    "img/frame4.png",
+                    "img/frame4.png"
+                    ];
+
+                    const framesmu = [
                     "img/frame4.png",
                     "img/frame3.png",
-                    "img/frame1.png",
-                    ];
+                    "img/frame1.png"
+                    ]
+
+                    let ducttape = false;
 
                     const img = document.getElementById("dimg");
 
-                    img.addEventListener("click", () => {
-                    let i = 0;
-                    const interval = setInterval(() => {
-                        img.src = frames[i];
-                        i++;
+                    function playKeySound() {
+                        const sound = new Audio('audio/key.wav');
+                        sound.play()
+                    }
 
-                        if (i === frames.length) {
-                        clearInterval(interval);
+                    img.addEventListener("mousedown", () => {
+                        ducttape = true;
+                        let i = 0;
+                        const interval = setInterval(() => {
+                            img.src = framesmd[i];
+                            i++;
+                            if (i === framesmd.length) {
+                            clearInterval(interval);
+                            }
+                        }, 30);
+                    });
+
+                    document.addEventListener("mouseup", () => {
+                        if (ducttape) {
+                            ducttape = false
+                        } else {
+                            return
                         }
-                    }, 30);
+                        let i = 0;
+                        const interval = setInterval(() => {
+                            img.src = framesmu[i];
+                            i++;
+                            if (i === framesmu.length) {
+                            clearInterval(interval);
+                            }
+                        }, 30);
                     });
                 </script>
             </div>
