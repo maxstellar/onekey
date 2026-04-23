@@ -269,11 +269,33 @@ header button:last-child {
 
 .nav {
     font-weight: bold;
-    padding: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    font-size: 1rem;
+    padding: 0.6rem 1.1rem;
+    min-height: 3rem;
+    min-width: fit-content;
     display: flex;
     align-items: center;
+    transition: background-color 0.2s linear, color 0.2s linear, border-color 0.2s linear;
+}
+
+.nav img {
+    transition: filter 0.2s linear;
+}
+
+.nav-active {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.nav-active img {
+    filter: invert(1);
+}
+
+.nav-active:hover {
+    border-style: solid;
+    border-color: black;
 }
 
 /* the following is supposed to kick in for mobile */

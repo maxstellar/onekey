@@ -172,5 +172,31 @@
         <footer>
             <p>made with ❤︎⁠ by <a href="https://hackclub.com/">hack club</a> and <a href="https://github.com/maxstellar/">@maxstellar</a><br>design inspired by <a href="https://scraps.hackclub.com/">scraps</a> and <a href="https://github.com/notaroomba/">@notaroomba</a></p>
         </footer>
+        <script>
+            const navSections = [
+                { sectionId: 'landing', buttonIndex: 0 },
+                { sectionId: 'about',   buttonIndex: 1 },
+                { sectionId: 'faq',     buttonIndex: 2 },
+            ];
+            const navButtons = document.querySelectorAll('header button.nav');
+
+            function setActiveNav(index) {
+                navButtons.forEach((btn, i) => btn.classList.toggle('nav-active', i === index));
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const match = navSections.find(s => s.sectionId === entry.target.id);
+                        if (match) setActiveNav(match.buttonIndex);
+                    }
+                });
+            }, { rootMargin: '-50% 0px -49% 0px', threshold: 0 });
+
+            navSections.forEach(({ sectionId }) => {
+                const el = document.getElementById(sectionId);
+                if (el) observer.observe(el);
+            });
+        </script>
     </body>
 </html>
