@@ -1,38 +1,45 @@
 @font-face {
-  font-family: 'Phantom Sans';
-  src:
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff')
-      format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2')
-      format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Phantom Sans';
+    src:
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff') format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
-  font-family: 'Phantom Sans';
-  src:
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff')
-      format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2')
-      format('woff2');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
+    font-family: 'Phantom Sans';
+    src:
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff') format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
 @font-face {
-  font-family: 'Phantom Sans';
-  src:
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff')
-      format('woff'),
-    url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2')
-      format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Phantom Sans';
+    src:
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff') format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
-html {
+:root {
+    --color-text: black;
+    --color-text-soft: #282828;
+    --color-bg: white;
+    --color-bg-soft: whitesmoke;
+    --radius-pill: 9999px;
+    --radius-card: 1rem;
+    --border-width: 0.25rem;
+    --transition-fast: 0.1s linear;
+    --transition-med: 0.2s linear;
+}
+
+/* ---------- base ---------- */
+html, body {
     width: 100%;
 }
 
@@ -42,9 +49,112 @@ body {
     scroll-behavior: smooth;
     font-family: 'Phantom Sans', sans-serif;
     font-size: 16px;
-    width: 100%;
 }
 
+p {
+    font-size: 1.2rem;
+    line-height: 1.77778;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color var(--transition-fast);
+    cursor: default;
+}
+
+a:hover {
+    color: var(--color-text-soft);
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+
+/* ---------- pill-shaped controls ---------- */
+button,
+.button,
+.input {
+    font-family: 'Phantom Sans', sans-serif;
+    border-radius: var(--radius-pill);
+    padding: 1.25rem;
+    font-size: 1.25rem;
+}
+
+button {
+    transition: background-color var(--transition-fast);
+    cursor: default;
+}
+
+button:hover,
+.button:hover {
+    cursor: pointer;
+}
+
+.button {
+    text-decoration: none;
+}
+
+/* ---------- border / fill variants ---------- */
+.dotted {
+    border: dotted var(--border-width) var(--color-text);
+}
+
+/* solid-border button/card; dotted on hover */
+.bdotted {
+    background-color: var(--color-bg);
+    outline: none;
+    border: solid var(--border-width);
+}
+
+.bdotted:hover {
+    border: dotted var(--border-width) var(--color-text);
+}
+
+input.dotted:focus {
+    outline: none;
+    border: solid var(--border-width);
+}
+
+.filled {
+    border: none;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-weight: 600;
+}
+
+.filled:hover {
+    background-color: var(--color-text-soft);
+}
+
+.rsvp .input {
+    margin-right: 0.5rem;
+}
+
+/* ---------- card ---------- */
+.card {
+    border-radius: var(--radius-card);
+    background-color: var(--color-bg);
+    padding: 1rem;
+}
+
+.famex { width: 30%; }
+
+.faqbox {
+    width: 43.305%;
+    margin-bottom: 1rem;
+}
+
+.faqwidebox { width: calc(86.61% + 3.5rem); }
+
+.eximg {
+    height: auto;
+    width: 10rem;
+}
+
+.cheesecenter {
+    text-align: center;
+}
+
+/* ---------- layout / sections ---------- */
 .youmortalscantcontainme {
     display: flex;
     justify-content: center;
@@ -66,6 +176,7 @@ body {
     margin-top: 15vh;
     height: 30rem;
     width: 35rem;
+    user-select: none;
 }
 
 .tagline {
@@ -74,73 +185,8 @@ body {
     margin-right: 3rem;
 }
 
-button {
-    font-family: 'Phantom Sans', sans-serif;
-    border-radius: 3.40282e38px;
-    padding: 1.25rem;
-    font-size: 1.25rem;
-    transition: background-color linear 0.1s;
-    cursor: default;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.button {
-    border-radius: 3.40282e38px;
-    padding: 1.25rem;
-    text-decoration: none;
-    font-size: 1.25rem;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-.filled {
-    border: none;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    transition: background-color linear 0.1s;
-}
-
-.filled:hover {
-    background-color: #282828;
-}
-
-.input {
-    border-radius: 3.40282e38px;
-    padding: 1.25rem;
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-family: 'Phantom Sans', sans-serif;
-}
-
-.dotted {
-    border: dotted 0.25rem;
-    border-color: black;
-}
-
-input.dotted:focus {
-    outline: none;
-    border: solid 0.25rem;
-}
-
-.bdotted {
-    background-color: white;
-    outline: none;
-    border: solid 0.25rem;
-}
-
-.bdotted:hover {
-    border: dotted 0.25rem;
-    border-color: black;
-}
-
 .sectionhead {
-    color: black;
+    color: var(--color-text);
     font-size: 4rem;
 }
 
@@ -153,36 +199,25 @@ input.dotted:focus {
     margin-right: auto;
 }
 
-.mt {
-    margin-top: 15rem;
-}
+.mt { margin-top: 15rem; }
 
-.ysws {
-    font-size: 1.13rem;
-}
+.ysws { font-size: 1.13rem; }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.77778;
-}
-
-.smallhead {
-    margin-top: 3rem;
-    font-size: 1.3rem;
-    letter-spacing: 0.7px;
-}
-
+.smallhead,
 .smallheadnm {
     font-size: 1.3rem;
     letter-spacing: 0.7px;
 }
 
+.smallhead { margin-top: 3rem; }
+
 #about {
-    color: #282828;
+    background-color: var(--color-bg-soft);
 }
 
+#about,
 .faq {
-    color: #282828;
+    color: var(--color-text-soft);
 }
 
 .boxes {
@@ -190,75 +225,23 @@ p {
     gap: 1rem;
 }
 
-.famex {
-    border-radius: 1rem;
-    background-color: white;
-    padding: 1rem;
-    width: 30%;
-}
-
-.faqbox {
-    border-radius: 1rem;
-    background-color: white;
-    padding: 1rem;
-    width: 43.305%;
-    margin-bottom: 1rem;
-}
-
-.faqwidebox {
-    border-radius: 1rem;
-    background-color: white;
-    padding: 1rem;
-    width: calc(86.61% + 3.5rem);
-}
-
-.eximg {
-    height: auto;
-    width: 10rem;
-}
-
-.cheesecenter {
-    text-align: center;
-}
-
-a {
-    color: black;
-    text-decoration: underline;
-    transition: color 0.1s linear;
-    cursor: default;
-}
-
-a:hover {
-    color: #282828;
-    text-decoration: underline dotted;
-    cursor: pointer;
-}
-
-footer {
-    margin-top: 3rem;
-    background-color: whitesmoke;
-    padding: 0.5rem;
-    text-align: center;
-}
-
+/* ---------- header / nav ---------- */
 header {
     display: flex;
     justify-content: right;
+    gap: 0.5rem;
     position: sticky;
     top: 0;
     padding-top: 3rem;
     margin-right: 3rem;
 }
 
-header button {
-    margin-right: 0.5rem;
-}
-
-header button:last-child {
-    margin-right: 0;
-}
-
 .hc-logo {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    height: 7vw;
+    min-height: 7rem;
     transform: rotate(0deg) translateY(-0.5rem);
     transition: transform 0.3s ease-in-out;
 }
@@ -275,18 +258,20 @@ header button:last-child {
     min-width: fit-content;
     display: flex;
     align-items: center;
-    transition: background-color 0.2s linear, color 0.2s linear, border-color 0.2s linear;
+    gap: 0.5rem;
+    transition: background-color var(--transition-med),
+                color var(--transition-med),
+                border-color var(--transition-med);
 }
 
 .nav img {
-    transition: filter 0.2s linear;
+    transition: filter var(--transition-med);
 }
 
 .nav-active {
-    background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: black;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
 }
 
 .nav-active img {
@@ -295,18 +280,22 @@ header button:last-child {
 
 .nav-active:hover {
     border-style: solid;
-    border-color: black;
+    border-color: var(--color-text);
 }
 
-/* the following is supposed to kick in for mobile */
-@media only screen and (max-width: 767px) {
-    header {
-        display: none !important;
-    }
+/* ---------- footer ---------- */
+footer {
+    margin-top: 3rem;
+    background-color: var(--color-bg-soft);
+    padding: 0.5rem;
+    text-align: center;
+}
 
-    .youmortalscantcontainme {
-        display: block;
-    }
+/* ---------- mobile ---------- */
+@media only screen and (max-width: 767px) {
+    header { display: none !important; }
+
+    .youmortalscantcontainme { display: block; }
 
     .logo {
         width: auto;
@@ -339,9 +328,7 @@ header button:last-child {
         text-align: center;
     }
 
-    #landing {
-        height: 75vh;
-    }
+    #landing { height: 75vh; }
 
     .centertext {
         width: 100%;
@@ -353,35 +340,21 @@ header button:last-child {
         box-sizing: border-box;
     }
 
-    .faqbox p, .faqwidebox p {
-        font-size: 2vh;
-    }
-
-    .famex p {
-        font-size: 1.6vh;
-    }
+    .faqbox p, .faqwidebox p { font-size: 2vh; }
+    .famex p { font-size: 1.6vh; }
 
     .eximg {
         height: auto;
         width: 15vw;
     }
 
-    form {
-        margin-top: 3vh;
-    }
+    form { margin-top: 3vh; }
 
-    .duo {
-        display: contents;
-    }
-
-    .duo div {
-        width: 87%
-    }
+    .duo { display: contents; }
+    .duo div { width: 87%; }
 }
 
-/* kicks in for desktop */
+/* ---------- desktop ---------- */
 @media screen and (min-width: 768px) {
-    .centertext, footer {
-        min-width: 45rem;
-    }
+    .centertext, footer { min-width: 45rem; }
 }

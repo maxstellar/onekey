@@ -7,8 +7,8 @@
         <meta property="og:title" content="onekey" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://maxstellar.github.io/onekey/img/og-banner.png" />
-        <meta property=“og:image:width content=“1200”>
-        <meta property=“og:image:height” content=“630”> 
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
         <meta property="og:description" content="make a program that only uses one key, get a one key macropad! A Hack Club program for teen coders." />
         <meta name="twitter:site" content="onekey - Hack Club">
         <meta name="twitter:title" content="onekey">
@@ -30,14 +30,14 @@
     </head>
     <body>
         <header>
-            <button style="vertical-align: middle;" class="bdotted nav" onclick="scrollToAnchor('home')"><img style="vertical-align: middle; margin-right: 7px;" src="https://icons.hackclub.com/api/icons/black/home.svg" width="30"><span>home</span></button>
-            <button class="bdotted nav" onclick="scrollToAnchor('about')"><img style="vertical-align: middle; margin-right: 8px;" src="https://icons.hackclub.com/api/icons/black/info.svg" width="30"><span>about</span></button>
-            <button class="bdotted nav" onclick="scrollToAnchor('faq')"><img style="vertical-align: middle; margin-right: 8px;" src="https://icons.hackclub.com/api/icons/black/support.svg" width="32"><span>faq</span></button>
+            <button class="bdotted nav" onclick="scrollToAnchor('home')"><img src="https://icons.hackclub.com/api/icons/black/home.svg" width="30"><span>home</span></button>
+            <button class="bdotted nav" onclick="scrollToAnchor('about')"><img src="https://icons.hackclub.com/api/icons/black/info.svg" width="30"><span>about</span></button>
+            <button class="bdotted nav" onclick="scrollToAnchor('faq')"><img src="https://icons.hackclub.com/api/icons/black/support.svg" width="32"><span>faq</span></button>
         </header>
-        <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 2vw; height: 7vw; min-height: 7rem;" ></a>
+        <a href="https://hackclub.com/"><img id="home" src="https://assets.hackclub.com/flag-orpheus-top-bw.svg" class="hc-logo" loading="lazy" decoding="async"></a>
         <div id="landing" class="youmortalscantcontainme">
             <div class="display">
-                <img style="user-select: none;" draggable="false" onmousedown="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
+                <img draggable="false" onmousedown="playKeySound()" id="dimg" class="dimg" src="img/frame1.png">
                 <script>
                     const framesmd = [
                     "img/frame1.png",
@@ -93,13 +93,13 @@
             <div class="panel">
                 <img class="logo" src="img/onekey.png">
                 <p class="tagline">make a program that only uses one key, get a one key macropad!</p>
-                <form method="GET" action="https://onekey.fillout.com/rsvp">
-                    <input style="margin-right: 0.5rem;" class="input dotted" type="email" name="email" placeholder="email" required>
+                <form method="GET" action="https://onekey.fillout.com/rsvp" class="rsvp">
+                    <input class="input dotted" type="email" name="email" placeholder="email" required>
                     <button type="submit" class="filled">RSVP!</button>
                 </form>
             </div>
         </div>
-        <div id="about" class="youmortalscantcontainme mt" style="background-color: whitesmoke;">
+        <div id="about" class="youmortalscantcontainme mt">
             <div class="centertext">
                 <h1 class="sectionhead">about onekey</h1>
                 <p class="ysws"><strong>you ship:</strong> a game, app, or program that only uses one key<br><strong>we ship:</strong> a customizable, community-designed one key macropad!</p>
@@ -109,15 +109,15 @@
                 <p class="smallhead"><strong>what can i even make?</strong></p>
                 <p>while it might seem difficult to think of ideas at first, you'll come to realize a lot can be done with just one key.<br>for inspiration, here are some famous examples, or check out <a href="https://maxstellar.github.io/onekey-examples/">some that i made myself!</a><br>the gallery is currently under construction, but when it's finished, you'll be able to view other teens' work.</p>
                 <div class="boxes">
-                    <div class="famex bdotted">
+                    <div class="card famex bdotted">
                         <div class="cheesecenter"><img class="eximg" src="img/Osu!_logo_2024.png"></div>
                         <p><strong>osu!</strong><br>a rhythm game where you aim at circles and tap a single key at the right time!</p>
                     </div>
-                    <div class="famex bdotted">
+                    <div class="card famex bdotted">
                         <div class="cheesecenter"><img class="eximg" src="img/geometry_dash.png"></div>
                         <p><strong>geometry dash</strong><br>a platformer where you tap a single key to jump over spikes!</p>
                     </div>
-                    <div class="famex bdotted">
+                    <div class="card famex bdotted">
                         <div class="cheesecenter"><img class="eximg" src="img/stack.png"></div>
                         <p><strong>stack</strong><br>a mobile game where you tap a single key to place moving blocks and build a tower!</p>
                     </div>
@@ -131,37 +131,37 @@
                 <h1 class="sectionhead">faq</h1>
                 <div class="faq">
                     <div class="boxes duo">
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>who is eligible?</strong></p>
                             <p>to be eligible for onekey, you need to be between the ages for 13 and 18.</p>
                         </div>
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>how much does it cost?</strong></p>
                             <p>it's 100% free! if you qualify, we'll pay for all your prizes + shipping (except customs fees)!</p>
                         </div>
                     </div>
                     <div class="boxes duo">
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>what counts as "one key?"</strong></p>
                             <p>your app should be controllable with only one key! anything else where you're pressing a button or clicking something for input is not allowed! mouse movement, mic, camera are acceptable.</p>
                         </div>
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>the macropads are customizable?</strong></p>
                             <p>yes, sort of... when claiming your prize, you can choose between a variety of different options, like case color, keycap design, and key switch. you'll be able to unlock more options by completing sidequests!</p>
                         </div>
                     </div>
                     <div class="boxes duo">
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>what can i make?</strong></p>
                             <p>all types of projects are allowed! whether it's a game, an app, or a website, as long as it only uses one key, it qualifies!</p>
                         </div>
-                        <div class="faqbox bdotted">
+                        <div class="card faqbox bdotted">
                             <p class="smallheadnm"><strong>how many projects can i make?</strong></p>
                             <p>as many as you'd like! there's no limit, but once you finish all side quests and meet all milestones, you'll have already unlocked all unique prizes.</p>
                         </div>
                     </div>
                     <div class="boxes duo">
-                        <div class="faqwidebox bdotted">
+                        <div class="card faqwidebox bdotted">
                             <p class="smallheadnm"><strong>is this legit? what's hack club?</strong></p>
                             <p>we're legit! hack club is the world's largest community of teenage makers, and a 501(c)(3) nonprofit. we've hosted programs like <a href="https://highseas.hackclub.com/">high seas</a> and <a href="https://summer.hackclub.com/">summer of making</a> which gave out prizes for building other sorts of projects. we're supported by donations from companies like GitHub or individual generous donations!</p>
                         </div>
